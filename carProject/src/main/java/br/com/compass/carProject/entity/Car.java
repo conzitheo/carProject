@@ -1,19 +1,22 @@
 package br.com.compass.carProject.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "CAR")
 public class Car {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idChassi;
 
     private String name;
 
-    private String endereco;
+    private String rua;
 
+    public Car() {
+    }
 }
+
+
