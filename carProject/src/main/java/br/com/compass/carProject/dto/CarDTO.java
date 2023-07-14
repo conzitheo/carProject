@@ -1,18 +1,17 @@
 package br.com.compass.carProject.dto;
 
-//import org.jetbrains.annotations.NotNull;
 
+import com.sun.istack.NotNull;
 
 public class CarDTO {
-//    @NotNull(message = "IdChassi must not be null")
+    @NotNull
     private Long idChassi;
-//    @NotNull(message = "Name must not be null")
+    @NotNull
     private String name;
-//    @NotNull(message = "Brand must not be null")
+    @NotNull
     private String brand;
-//    @NotNull(message = "Color must not be null")
+    @NotNull
     private String color;
-//    @NotNull(message = "FabricationYear must not be null")
     private String fabricationYear;
 
 

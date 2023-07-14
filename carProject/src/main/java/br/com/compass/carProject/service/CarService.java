@@ -22,7 +22,7 @@ public class CarService {
         validateBrand(carDTO.getBrand());
 
         CarEntity carEntity = new CarEntity();
-        carEntity.setName(carDTO.getName());
+                                                                                                      carEntity.setName(carDTO.getName());
         carEntity.setBrand(carDTO.getBrand());
         carEntity.setColor(carDTO.getColor());
         carEntity.setFabricationYear(carDTO.getFabricationYear());
@@ -32,13 +32,13 @@ public class CarService {
 
     public CarEntity getCarById(Long idChassi) {
         return carRepository.findById(idChassi)
-                .orElseThrow(() -> new IllegalArgumentException("this idChassi:  " + idChassi + "was not found"));
+                .orElseThrow(() -> new IllegalArgumentException("This idChassi:  " + idChassi + " was not found"));
     }
 
 
     private void validateBrand(String brand) {
         if (!brand.equals("Ford") && !brand.equals("Chevrolet") && !brand.equals("BMW") && !brand.equals("Volvo")) {
-            throw new IllegalArgumentException("only accepted brands: Ford, Chevrolet, BMW, Volvo\nInvalid brand: " + brand);
+            throw new IllegalArgumentException("Only accepted brands: Ford, Chevrolet, BMW, Volvo\nInvalid brand: " + brand);
         }
     }
 }
