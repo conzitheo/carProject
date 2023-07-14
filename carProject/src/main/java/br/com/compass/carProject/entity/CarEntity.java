@@ -6,8 +6,7 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CAR")
-
+@Table(name = "car")
 
 public class CarEntity {
 
@@ -19,12 +18,15 @@ public class CarEntity {
     @NotNull
     private String name;
 
+
     @Column(nullable = false)
     @NotNull
     private String brand;
     @NotNull
+    @Column(nullable = false)
     private String color;
     @NotNull
+    @Column(nullable = false)
     private String fabricationYear;
 
     public CarEntity() {
@@ -79,7 +81,16 @@ public class CarEntity {
         this.fabricationYear = fabricationYear;
     }
 
-
+    @Override
+    public String toString() {
+        return "CarEntity{" +
+                "idChassi=" + idChassi +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", color='" + color + '\'' +
+                ", fabricationYear='" + fabricationYear + '\'' +
+                '}';
+    }
 }
 
 
