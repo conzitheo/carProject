@@ -24,7 +24,7 @@ public class CarController {
     }
 
 
-    @GetMapping("/get/{idChassi}")
+    @GetMapping("car/get/{idChassi}")
     public ResponseEntity<CarEntity> getCar(@PathVariable Long idChassi) {
         try {
             CarEntity carEntity = carService.getCarById(idChassi);
@@ -39,7 +39,7 @@ public class CarController {
     }
 
 
-    @PostMapping("/post")
+    @PostMapping("car/post")
     public ResponseEntity<CarEntity> createCar(@RequestBody CarDTO carDTO) {
         CarEntity savedCarEntity = carService.saveCar(carDTO);
         return ResponseEntity.ok(savedCarEntity);
